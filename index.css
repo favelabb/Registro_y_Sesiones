@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(50deg, #5e35b1, #004080, #7b1fa2, #64b5f6, #42a5f5, #1e88e5, #0277bd, #00897b, #003366,  #003399, #0066cc, #3399ff, #66ccff, #7b1fa2);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    background-color: #ffffff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2));
+    z-index: -1;
+    transform: scale(1.02);
+}
+
+.container h1 {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.container input[type="email"],
+.container input[type="password"],
+.container input[type="button"],
+.container button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.container input[type="email"],
+.container input[type="password"] {
+    background-color: #fafafa;
+    color: #333333;
+}
+
+.container input[type="button"],
+.container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container input[type="button"]:hover,
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.container #buttonO {
+    background-color: #ff4b5c;
+}
+
+.container #buttonO:hover {
+    background-color: #d43f4a;
+}
+
+#statusIcon {
+    font-size: 2rem;
+    color: green;
+    margin-top: 0.5rem;
+}
+
+.flip .container {
+    transform: rotateY(180deg);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container input[type="email"],
+    .container input[type="password"],
+    .container input[type="button"],
+    .container button {
+        font-size: 0.9rem;
+    }
+}

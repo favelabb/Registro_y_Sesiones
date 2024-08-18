@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <title>PAGINA</title>
+</head>
+<body>
+    
+    <div id="registerContainer" class="container">
+        <h1>Registro</h1>
+        <input type="email" id="emailR" placeholder="dato@email.com">
+        <input type="password" id="passR" placeholder="*************">
+        <input type="button" value="Enviar" id="buttonR">
+    </div>
+    
+    <div id="loginContainer" class="container">
+        <h1>Login</h1>
+        <input type="email" id="emailL" placeholder="dato@email.com">
+        <input type="password" id="passL" placeholder="*************">
+        <input type="button" value="Enviar" id="buttonL">
+    </div>
+
+    <div id="userInfo" class="container" style="display: none;">
+        <h1>Usuario Conectado</h1>
+        <p id="userEmail">No hay usuario conectado</p>
+        <i id="statusIcon" class="fa"></i>
+        <button id="buttonO">LogOut</button>
+    </div>
+
+    <script src="index.js" type="module"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+</body>
+</html>
